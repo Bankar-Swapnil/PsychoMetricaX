@@ -35,10 +35,10 @@
 </div>
 <!-- End Page Preloader -->
 <!-- Start Navigation -->
-<nav class="navbar navbar-expand-lg" style="background-color: deepskyblue;">
+<nav class="navbar navbar-expand-lg" style="background-color: #090a0a;">
     <div class="container">
         <!-- Start Logo -->
-        <a class="logo" href="home-1.html" style="width:unset;">
+        <a class="logo" href="home-1.html" style="width:unset; color: white;">
            <h4>PsychoMetricaX</h4>
         </a>
         <!-- End Logo -->
@@ -78,7 +78,7 @@
 <!-- End Header -->
 <!-- Start Contacts -->
 <section class="page-contact section-padding">
-    <div class="container">
+    <div class="container" >
          <div class="box-body">
      	    {% with messages = get_flashed_messages() %}
 		    {% if messages %}
@@ -95,25 +95,28 @@
 
 		    {% block body %}{% endblock %}
             </div>
-        <div class="row">
-            <div class="offset-lg-1 col-lg-10">
+        <div class="row" style="align-items: center;   padding-top: 6%; padding-bottom: 6%; margin: 3%;  box-shadow: rgba(149, 157, 165, 0.7) 0px 5px 24px;">
+            <div class="offset-lg-1 col-lg-3">
+                <img src="../static/img/login/login.jpg" alt="">
+            </div>
+            <div class="offset-lg-1 col-lg-6">
                 <form class="form" id="contact-form" method="post" action="/check_user">
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-10">
                                 <div class="form-group">
                                     <input id="form_email" type="email" name="email" placeholder="Email" required="required" data-error="email is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-10">
                                 <div class="form-group">
                                     <input type="password" name="password" placeholder="Password" required="required" data-error="password is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 Remember me
                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
 
@@ -165,7 +168,7 @@
         </div>
     </div>
     <div class="sub-footer text-center">
-        <p>&copy; 2019 <b>PsychoMetricaX</b>. All Rights Reserved.</p>
+        <p>&copy; 2024 <b>PsychoMetricaX</b>. All Rights Reserved.</p>
     </div>
 </footer>
 <!-- End Footer -->
