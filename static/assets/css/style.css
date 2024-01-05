@@ -334,9 +334,9 @@ span, a, a:hover {
 .nav-scroll .icon-bar {
     color: #222;
 }
-.nav-scroll .navbar-nav .nav-link {
+/* .nav-scroll .navbar-nav .nav-link {
     color: #222;
-}
+} */
 .nav-scroll .navbar-nav .logo {
     padding: 15px 0;
     color: #111;
