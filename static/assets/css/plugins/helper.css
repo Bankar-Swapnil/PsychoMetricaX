@@ -396,7 +396,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [data-overlay-dark]:before {
-    background: #1a1d24;
+    background-color: #22a57e40;
 }
 
 [data-overlay-light]:before {
