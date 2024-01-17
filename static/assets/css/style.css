@@ -178,9 +178,8 @@ span, a, a:hover {
 }
 .v-middle {
     position: absolute;
-    width: 100%;
     top: 50%;
-    left: 0;
+    left: 10%;
     -webkit-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
 }
@@ -257,33 +256,33 @@ span, a, a:hover {
     transition-delay: .2s;
 }
 .butn-bord {
-    border-color: #8046e6;
+    border-color: #3cdbac;
 }
 .butn-bord:before, .butn-bord:after {
-    background: #8046e6;
+    background: #3cdbac;
 }
 .butn-bord:hover span {
     color: #fff;
 }
 .butn-bg {
-    background: #8046e6;
-    border-color: #8046e6;
+    background: #3cdbac;
+    border-color: #3cdbac;
     color: #fff;
 }
 .butn-bg:hover span {
-    color: #8046e6;
+    color: #3cdbac;
 }
 .butn-light {
     background: #fff;
 }
 .butn-light:before, .butn-light:after {
-    background: #8046e6;
+    background: #3cdbac;
 }
 .butn-light:hover span {
     color: #fff;
 }
 .butn-light span {
-    color: #8046e6;
+    color: #3cdbac;
 }
 
 /*=======================================================
@@ -297,14 +296,15 @@ span, a, a:hover {
     background: transparent;
     z-index: 9;
     min-height: 70px;
+    background-color: #3cdbac !important;
 }
 .navbar .icon-bar {
-    color: #fff;
+    color: black !important;
 }
 .navbar .navbar-nav .nav-link {
     font-size: 13px;
     font-weight: 500;
-    color: #eee;
+     color: black;
     letter-spacing: 1px;
     margin: 15px 5px;
     -webkit-transition: all .4s;
@@ -317,7 +317,8 @@ span, a, a:hover {
     color: #8046e6 !important;
 }
 .nav-scroll {
-    background: #fff;
+    background-color: #3cdbac7d !important;
+    color: black;
     -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
     padding: 0;
@@ -331,6 +332,15 @@ span, a, a:hover {
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
 }
+
+.nav-scroll .logo h4{
+    color: black;
+}
+
+.nav-scroll .navbar-nav .nav-link{
+    color: black;
+    font-weight: 500;
+}
 .nav-scroll .icon-bar {
     color: #222;
 }
@@ -342,7 +352,6 @@ span, a, a:hover {
     color: #111;
 }
 .logo {
-    padding: 15px 5px;
     width: 80px;
 }
 .dropdown:hover .dropdown-menu, .dropdown:hover .mega-menu {
@@ -501,6 +510,7 @@ li.nav-item.active a {
     letter-spacing: 2px;
     -webkit-animation-delay: .6s;
     animation-delay: .6s;
+   text-shadow:4px 2px 20px #34f2ac;
 }
 .header .caption p {
     font-size: 15px;
@@ -582,8 +592,15 @@ li.nav-item.active a {
 .page-header h1 {
     margin-bottom: 10px;
     font-weight: 600;
+    color: black;
+    text-shadow:4px 2px 20px #34f2ac;
 }
 
+.o-hidden .slid{
+    color: black;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 /*=======================================================
   05. Start Hero
 ========================================================*/
@@ -1171,6 +1188,7 @@ li.nav-item.active a {
     margin-bottom: 30px;
     padding-bottom: 30px;
     position: relative;
+    color: black;
 }
 .states h5:after {
     content: '';
@@ -1993,9 +2011,9 @@ li.nav-item.active a {
     letter-spacing: 2px;
 }
 .footer {
-    background-color: #171717;
+    background-color: #5df0c4;
     padding: 50px 0 0;
-    color: #eee;
+    color: black;
 }
 .footer .title h5 {
     font-size: 12px;
@@ -2070,7 +2088,7 @@ li.nav-item.active a {
 .footer .sub-footer {
     padding: 20px 0;
     margin-top: 50px;
-    background-color: #131313;
+    background-color: #3cdbac;
 }
 
 /*=======================================================
