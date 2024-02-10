@@ -29,7 +29,9 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.naive_bayes import MultinomialNB
 from test_utils import *
 
-UPLOAD_FOLDER = 'C:/Users/Phoebe E. A. Memsah/Downloads/web_platform_for_aptitude_assessment-master/web_platform_for_aptitude_assessment-master/CV/'
+
+# UPLOAD_FOLDER = 'C:/Users/Phoebe E. A. Memsah/Downloads/web_platform_for_aptitude_assessment-master/web_platform_for_aptitude_assessment-master/CV/'
+UPLOAD_FOLDER ="D:/BE_PROJECT/PsychoMetricaX/CV/"
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'pdf'}
 
 app = Flask(__name__)
@@ -53,6 +55,10 @@ connection = pymysql.connect(
 def home():
     return render_template("/home.html")
 
+
+@app.route("/subscription.html")
+def subscription():
+    return render_template("/subscription.html")
 
 @app.route("/aboutus.html")
 def aboutus():
@@ -154,6 +160,7 @@ def reportview():
     cursor.close()
     return render_template("/studenthome.html")
    
+
 
 
 @app.route("/reportgeneration")
@@ -573,6 +580,7 @@ def post_question():
             flash(
                 "Your assessment is over, please do fill out the details in 'tell us more' section and you can also view your results in 'report' section. Thank you")
             return reportview()
+        
         else:
             return quiz()
 
