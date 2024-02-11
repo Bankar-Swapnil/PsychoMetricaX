@@ -94,34 +94,34 @@ def cvreport():
     
     if 'Objective' in resume_text:
         resume_score = resume_score+20
-        a = '[+] Awesome! You have added Objective'
+        a = '✅ Awesome! You have added Objective'
     else:
-        a = '[-] According to our recommendation please add your career objective, it will give your career intension to the Recruiters.'
+        a = '❌ According to our recommendation please add your career objective, it will give your career intension to the Recruiters.'
         
 
     if 'Declaration'  in resume_text:
         resume_score = resume_score + 20
-        b = '[+] Awesome! You have added Declaration✍'
+        b = '✅ Awesome! You have added Declaration✍'
     else:
-        b ='[-] According to our recommendation please add Declaration✍. It will give the assurance that everything written on your resume is true and fully acknowledged by you'
+        b ='❌ According to our recommendation please add Declaration✍. It will give the assurance that everything written on your resume is true and fully acknowledged by you'
 
     if 'Hobbies' or 'Interests'in resume_text:
         resume_score = resume_score + 20
-        c = '[+] Awesome! You have added your Hobbies⚽'
+        c = '✅ Awesome! You have added your Hobbies⚽'
     else:
-        c = '[-] According to our recommendation please add Hobbies⚽. It will show your persnality to the Recruiters and give the assurance that you are fit for this role or not.'
+        c = '❌ According to our recommendation please add Hobbies⚽. It will show your persnality to the Recruiters and give the assurance that you are fit for this role or not.'
 
     if 'Achievements' in resume_text:
         resume_score = resume_score + 20
-        d = '[+] Awesome! You have added your Achievements🏅'
+        d = '✅ Awesome! You have added your Achievements🏅'
     else:
-        d = '[+] According to our recommendation please add Achievements🏅. It will show that you are capable for the required position.'
+        d = '❌ According to our recommendation please add Achievements🏅. It will show that you are capable for the required position.'
 
     if 'Projects' in resume_text:
         resume_score = resume_score + 20
-        e = '[+] Awesome! You have added your Projects👨‍💻'
+        e = '✅ Awesome! You have added your Projects👨‍💻'
     else:
-        e = '[-] According to our recommendation please add Projects👨‍💻. It will show that you have done work related the required position or not.'
+        e = '❌ According to our recommendation please add Projects👨‍💻. It will show that you have done work related the required position or not.'
     
     f = '**Resume Score📝**"'
    
@@ -1025,8 +1025,8 @@ def insert_data(name,email,no_of_pages,skills, stud_id):
     cursor = connection.cursor()
     DB_table_name = 'user_data'
     insert_sql = "REPLACE INTO " + DB_table_name + """
-    values (0,%s,%s,%s,%s,%s)"""
-    rec_values = (name, email, no_of_pages, skills,stud_id)
+    values (%s,%s,%s,%s,%s,%s)"""
+    rec_values = (stud_id, name, email, no_of_pages, skills,stud_id)
     cursor.execute(insert_sql, rec_values)
     connection.commit()
 
