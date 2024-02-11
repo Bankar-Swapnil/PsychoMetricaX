@@ -143,10 +143,43 @@
 }
 
 .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a, .skin-blue .sidebar-menu>li:hover>a{
-    background-color: #7ff9d6c7 !important;
+    background-color: #b4fde8c7 !important;
     color: #3cdbac;
 }
 
 .butn butn-bg:hover{
     color: #3cdbac;
+}
+
+.alert-info, .bg-aqua, .callout.callout-info, .label-info, .modal-info .modal-body{
+    background-color: #edfffac7 !important;
+    color: #3cdbac !important;
+    border: 2px solid #3cdbac;
+}
+
+
+.deleteA_btn:hover{
+    background-color: #fff;
+    color: #3cdbac;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>.user-footer .btn-default{
+    background: #3cdbac;
+    border-color: #3cdbac;
+    color: #fff;
+    border: 2px solid #3cdbac;
+    border-radius: 22px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>.user-footer .btn-default:hover{
+    background-color: #fff;
+    color: #3cdbac;
+}
+
+.skin-blue .main-header li.user-header{
+    background-color: #b4fde8c7 !important;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p{
+    color: black;
 }
