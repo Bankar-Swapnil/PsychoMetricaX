@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PsychoMetricaX</title>
     <!-- Tell the browser to be responsive to screen width -->
+    <!-- Main Css -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="{{ url_for('static', filename='dist/adminlte.min.css') }}">
     <!-- Google Font -->
@@ -13,6 +14,7 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style2.css') }}"/>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -23,7 +25,7 @@
             <a href="index2.html" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini">
-                    <b>UL</b>E</span>
+                    <b>PM</b>X</span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg">
                     <b>PsychoMetricaX</span>
@@ -187,6 +189,11 @@
                                                 <input type="text" name="cname" value="{{row[2]}}" class="form-control"
                                                     readonly>
                                             </div>
+                                            <div class="col-sm-9 " style="margin-top: 15px;">
+                                                <p>Please click below Button to view your
+                                                    CV results.</p>
+                                                    <a href="cvreport.html"><button type="submit" class="butn butn-bg"><span>CV analyze</span></button><a href="cvreport.html"></a>
+                                            </div>
                                         </div>
                                     </div>
                                     {% endfor %}
@@ -221,8 +228,7 @@
                                                         <td><input type="text" name="aptmark" value="{{row[7]}}"
                                                                 class="form-control" readonly></td>
                                                     </tr>
-                                                    <p>Please click <a href="cvreport.html">this link</a> to view your
-                                                        CV results.</p>
+                                                    
                                                     {% endfor%}
                                                 </tbody>
                                             </table>
