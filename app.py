@@ -31,7 +31,7 @@ from test_utils import *
 
 
 # UPLOAD_FOLDER = 'C:/Users/Phoebe E. A. Memsah/Downloads/web_platform_for_aptitude_assessment-master/web_platform_for_aptitude_assessment-master/CV/'
-UPLOAD_FOLDER ="D:/BE_PROJECT/PsychoMetricaX/CV/"
+UPLOAD_FOLDER ="F:/final_year_project/PsychoMetricaX/cv"
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'pdf'}
 
 app = Flask(__name__)
