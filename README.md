@@ -13,3 +13,4 @@
 12. Push the committed changes: `git push>`
 13. Raise a pull request to Upstream dev-angular branch
 14. Pull all new changes from dev-angular using: `git pull upstream main` to the new branch to contribute again.
+15. Create pull request from github too.
