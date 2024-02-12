@@ -163,8 +163,8 @@ def reportview():
 
 
 
-@app.route("/reportgeneration")
-def reportgeneration():
+@app.route("/Home")
+def Home():
     cursor = connection.cursor()
     command = "select stud_first_name, stud_last_name, stud_class, science, humanities, commerce, aptitude, total from student_profile where stud_id =%s "
     cursor.execute(command, session['id'])
@@ -284,7 +284,13 @@ def check_user():
                     session['type'] = "Applicant"
                     session['username'] = email
                     session['id'] = uid
-                    return render_template("/studenthome.html")
+                    cursor = connection.cursor()
+                    command = "select stud_first_name, stud_last_name, stud_class, science, humanities, commerce, aptitude, total from student_profile where stud_id =%s "
+                    cursor.execute(command, session['id'])
+                    res = cursor.fetchall()
+                    cursor.close()
+                    return render_template("/reportgeneration.html", data=res)
+                
                 else:
                     flash("Invalid Login")
                 gc.collect()
