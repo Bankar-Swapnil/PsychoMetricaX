@@ -157,8 +157,11 @@ def reportview():
     query = "update student_profile set science = %s , commerce = %s, humanities = %s, aptitude = %s, total =%s where stud_id = %s"
     cursor.execute(query, (percentage1, percentage2, percentage3, percentage4, percentage5, session['id']))
     connection.commit()
+    command = "select stud_first_name, stud_last_name, stud_class, science, humanities, commerce, aptitude, total from student_profile where stud_id =%s "
+    cursor.execute(command, session['id'])
+    res = cursor.fetchall()
     cursor.close()
-    return render_template("/studenthome.html")
+    return render_template("/reportgeneration.html", data=res)
    
 
 
