@@ -22,6 +22,17 @@
     #startquiz:hover{
       background-color: rgb(73, 213, 73);
     }
+
+    .instr{
+      margin: 15px;
+    }
+
+    .instr ul li{
+      font-size: 18px;
+      font-weight: lighter;
+      margin-bottom: 4px;
+    }
+
   </style>
 </head>
 
@@ -177,9 +188,22 @@
                             {% endfor %}
                             {% endif %}
                             {% endwith %}
-                            <div class="text-center">
+                            <div class="instr">
+                              <h3>Instructions</h3>
+
+                              <ul>
+                                <li>Answer each question truthfully. This assessment is designed to understand your natural preferences, so there are no right or wrong answers.</li>
+                                <li>Go with your initial reaction. Don't overthink – choose the option that feels most natural to you.</li>
+                                <li>If a question doesn't quite fit, select the answer that is closest to how you generally feel.</li>
+                                <li>Take your time. There's no rush. This is about understanding you better.</li>
+                                <li>Questions cover different aspects of your life – work, social, personal. Consider various situations while responding.</li>
+                                <li>If a question is unclear or you can't decide, feel free to skip it. The goal is to provide insights, not stress.</li>
+                                <li>Enjoy the process! Personality assessments are a tool for self-discovery.</li>
+                              </ul>
+                            </div>
+                            <div class="text-center" style="margin-top: 30px; margin-bottom: 20px;">
                                 <p style="    text-align: justify;"></p>
-                                <a href="/quiz.html" style="color: #fff;"><button id="startquiz " class="butn butn-bg "> <span>Start Quiz</span></button></a>
+                                <a href="/quiz.html" style="color: #fff;"><button id="startquiz " class="butn butn-bg " style="font-size: larger;" > <span>Start Quiz</span></button></a>
                             </div>
                             {% block body %}{% endblock %}
                         </div>
