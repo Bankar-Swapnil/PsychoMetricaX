@@ -183,26 +183,26 @@
                                 {% endif %}
                                 {% endwith %}
                                 {% block body %}
-                                {% for row in data %}
+                                {% for row in data %}                             
                                 <div class="form-group row">
                                     <input value="{{row[0]}}" type="hidden" name="id">
-                                    <div class="col-md-3"><label for="name">Science</label>
+                                    <div class="col-md-3"><label for="name">Extraversion</label>
                                     </div>
                                     <div class="col-md-9"><input value="{{row[1]}}" type="text" name="des1"
                                                                   class="form-control"></div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-md-3"><label for="name">Commerce</label></div>
+                                    <div class="col-md-3"><label for="name">Agreeableness</label></div>
                                     <div class="col-md-9"><input value="{{row[2]}}" type="text" name="des2"
                                                                   class="form-control"></div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-md-3"><label for="name">Humanities</label></div>
+                                    <div class="col-md-3"><label for="name">Open-Mindedness</label></div>
                                     <div class="col-md-9"><input value="{{row[3]}}" type="text" name="des3"
                                                                   class="form-control"></div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-md-3"><label for="name">Aptitude</label></div>
+                                    <div class="col-md-3"><label for="name">Neuroticism</label></div>
                                     <div class="col-md-9"><input value="{{row[4]}}" type="text" name="des4"
                                                                   class="form-control"></div>
                                 </div>
