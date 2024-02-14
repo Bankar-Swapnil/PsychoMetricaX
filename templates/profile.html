@@ -20,6 +20,32 @@
     <!-- Main Css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style2.css') }}"/>
+    <style>
+      input[type="file"] {
+        position: absolute;
+        z-index: -1;
+        top: 10px;
+        left: 25px;
+        font-size: 17px;
+        color: #b8b8b8;
+      }
+      .button-wrap {
+        position: relative;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        /* background-color: #8ebf42; */
+        font-size: 16px;
+        font-weight: bold;
+        /* color: #fff; */
+      }
+      .button:hover{
+        color: #3cdbac;
+      }
+    </style>
 </head>
 <body>
 <!-- Start Page Preloader -->
@@ -95,7 +121,7 @@
 
 		    {% block body %}{% endblock %}
             </div>
-        <div class="row">
+        <div class="row"  style="align-items: center;   padding-top: 6%; padding-bottom: 6%; margin: 3%;  box-shadow: rgba(149, 157, 165, 0.7) 0px 5px 24px;">
             <div class="offset-lg-1 col-lg-10">
 
 
@@ -159,31 +185,23 @@
                     </div>
                     <div class="form-group row" action="/req" >
                       <div class="col-md-3"><label for="name">CV</label></div>
-                        <b>Choose the required CV file:</b> <input type="file" name="cv">
+                      <div class="button-wrap">
+                        <label class="button butn butn-bg" for="upload"><span>Upload File</span></label>
+                        <input id="upload" type="file" name="cv">
+                      </div>
+                        <!-- <b>Choose the required CV file:</b> <input type="file" name="cv"> -->
                     </div>
 
                   </div>
                   <!-- end of col-md-6 -->
                 </div>
                 <!-- end of .row -->
-
-
-
-
-
-
-
-
-
-
-
-
               </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary pull-right" formaction="/post_profile">Submit</button>
-                  <button type="submit" class="btn btn-primary pull-right"formaction="/logoutprofile">Cancel</button>
+                <button type="submit" class="butn butn-bg pull-right" formaction="/post_profile"><span>Submit</span></button>
+                  <button type="submit" class="butn butn-bg pull-right"formaction="/logoutprofile"><span>Cancel</span></button>
               </div>
             </form>
             </div>
