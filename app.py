@@ -203,10 +203,12 @@ def adddesc():
             cursor.execute(command, (id, desc1, desc2, desc3))
             connection.commit()
             cursor.close()
-            return render_template("/studenthome.html")
+            # return render_template("/reportgeneration.html")
+            return redirect("/Home")
         else:
             flash("You have already aswered to these questions")
-            return render_template("/studentdescription.html")
+            # return render_template("/reportgeneration.html")
+            return redirect("/Home")
     else:
         cursor = connection.cursor()
         command = "select count(*) from student_description where stud_id =%s"
