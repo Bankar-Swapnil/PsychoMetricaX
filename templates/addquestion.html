@@ -13,6 +13,12 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
           <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style2.css') }}"/>
+          <style>
+            .b1:hover{
+                background-color:#b4fde8c7 !important;
+                color: #3cdbac;
+            }
+          </style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -121,7 +127,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="/insttextcorpus">
                         <i class="fa fa-users"></i> <span>Training text corpus preparation</span>
                     </a>
@@ -130,7 +136,7 @@
                     <a href="#">
                         <i class="fa fa-users"></i> <span>Learning</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="/instmanagestudent">
                         <i class="fa fa-users"></i> <span>Manage Student</span>
@@ -242,7 +248,7 @@
                                 </div>
                                 <div class="box-footer">
                                     <form method="post" id="passwordForm">
-                                        <input type="submit" formaction="/addquestion" class="btn btn-info pull-right"
+                                        <input type="submit" formaction="/addquestion" class="butn butn-bg pull-right b1"
                                                data-loading-text="adding question to database..." value="Add">
                                     </form>
 
