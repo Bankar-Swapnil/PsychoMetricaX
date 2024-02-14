@@ -30,8 +30,7 @@ from sklearn.naive_bayes import MultinomialNB
 from test_utils import *
 
 
-# UPLOAD_FOLDER = 'C:/Users/Phoebe E. A. Memsah/Downloads/web_platform_for_aptitude_assessment-master/web_platform_for_aptitude_assessment-master/CV/'
-UPLOAD_FOLDER ="F:/final_year_project/PsychoMetricaX/cv"
+UPLOAD_FOLDER ="D:/BE_PROJECT/PsychoMetricaX/cv"
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'pdf'}
 
 app = Flask(__name__)
@@ -705,8 +704,10 @@ def post_profile():
             session['cv'] = secure_filename(cv.filename)
             
         flash("Thanks for registering!")
-        return redirect("/studenthome.html")
+        return redirect("/Home")
     connection.close()
+    
+
     
 
 
@@ -814,7 +815,7 @@ def studeditprofile(id):
 def textcorpus():
     if request.method == "GET":
         cursor = connection.cursor()
-        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name,student_description.label FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
+        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
         cursor.execute(command)
         res = cursor.fetchall()
         return render_template("/insttextcorpus.html", data=res)
@@ -825,7 +826,7 @@ def textcorpus():
         command = "update student_description set label =%s where stud_id =%s"
         cursor.execute(command, (label, btn))
         connection.commit()
-        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name,student_description.label FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
+        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
         cursor.execute(command)
         res = cursor.fetchall()
         return render_template("/insttextcorpus.html", data=res)
@@ -835,7 +836,7 @@ def textcorpus():
 def insttextnot():
     if request.method == "GET":
         cursor = connection.cursor()
-        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name,student_description.label FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
+        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
         cursor.execute(command)
         res = cursor.fetchall()
         return render_template("/insttextcorpus.html", data=res)
@@ -846,7 +847,7 @@ def insttextnot():
         command = "update student_description set label =%s where stud_id =%s"
         cursor.execute(command, (label, btn))
         connection.commit()
-        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name,student_description.label FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
+        command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
         cursor.execute(command)
         res = cursor.fetchall()
         return render_template("/insttextcorpus.html", data=res)
@@ -870,7 +871,7 @@ def csvadd():
             a = (ds1,de2 ,de3)
             writer.writerow({'id': i[0], 'label': i[1], 'msg': s.join(a)})
     flash("sucessful")
-    command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name,student_description.label FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
+    command = "select student_profile.stud_id,student_profile.stud_first_name,student_profile.stud_last_name FROM student_profile JOIN student_description ON student_profile.stud_id= student_description.stud_id"
     cursor.execute(command)
     res = cursor.fetchall()
     return render_template("/insttextcorpus.html", data=res)
