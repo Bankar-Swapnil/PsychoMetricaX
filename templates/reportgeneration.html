@@ -204,22 +204,22 @@
                                                 <tbody>
                                                     {%for row in data%}
                                                     <tr>
-                                                        <td><span style="font-weight:bold">Science</span></td>
+                                                        <td><span style="font-weight:bold">Extraversion</span></td>
                                                         <td><input type="text" name="scimark" value="{{row[3]}}"
                                                                 class="form-control" readonly></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><span style="font-weight:bold">Humanities</span></td>
+                                                        <td><span style="font-weight:bold">Agreeableness</span></td>
                                                         <td><input type="text" name="commark" value="{{row[4]}}"
                                                                 class="form-control" readonly></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><span style="font-weight:bold">Commerce</span></td>
+                                                        <td><span style="font-weight:bold">Open-Mindedness</span></td>
                                                         <td><input type="text" name="hummark" value="{{row[5]}}"
                                                                 class="form-control" readonly></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><span style="font-weight:bold">Aptitude</span></td>
+                                                        <td><span style="font-weight:bold">Neuroticism</span></td>
                                                         <td><input type="text" name="aptmark" value="{{row[6]}}"
                                                                 class="form-control" readonly></td>
                                                     </tr>
@@ -260,7 +260,7 @@
 
             <script>
                 // Fetch data from the HTML table
-                var labels = ['Science', 'Humanities', 'Commerce', 'Aptitude'];
+                var labels = ['Extraversion', 'Agreeableness', 'Open-Mindness', 'Neuroticism'];
                 var dataValues = [];
 
                 {% for row in data %}
