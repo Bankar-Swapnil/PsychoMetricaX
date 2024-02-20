@@ -169,24 +169,24 @@
                             <form action="/post_question" method="post">
                                 {%for row in data%}
                                 <div class="row">
-                                 <div class="col-md-11">
+                                 <div class="col-md-11" style="margin-left: 60px; margin-bottom: 10px;">
                                     <input type="hidden" name="question_id" value="{{row[2]}}"/>
                                     <h3><br>{{row[3]}}</h3>
                                  </div>
                                 </div>
-                                <div class="intro col-lg-12 text-center mb-80">
+                                <div class="intro col-lg-12 mb-80" style="margin-left: 60px;">
                                     <div class="row">
-                                     <div class="col-md-3">
-                                        <label><input required type="radio" name="response" value="{{row[4]}}">&nbsp;{{row[4]}}</label>
+                                     <div class="col-md-10">
+                                        <label style="font-size: 16px;"><input required type="radio" name="response" value="{{row[4]}}">&nbsp;{{row[4]}}</label>
                                      </div>
-                                     <div class="col-md-3">
-                                        <label><input required type="radio" name="response" value="{{row[5]}}">&nbsp;{{row[5]}}</label>
+                                     <div class="col-md-10">
+                                        <label style="font-size: 16px;"><input required type="radio" name="response" value="{{row[5]}}">&nbsp;{{row[5]}}</label>
                                      </div>
-                                     <div class="col-md-3">
-                                        <label><input required type="radio" name="response" value="{{row[6]}}">&nbsp;{{row[6]}}</label>
+                                     <div class="col-md-10">
+                                        <label style="font-size: 16px;"><input required type="radio" name="response" value="{{row[6]}}">&nbsp;{{row[6]}}</label>
                                      </div>
-                                     <div class="col-md-3">
-                                        <label><input required type="radio" name="response" value="{{row[7]}}">&nbsp;{{row[7]}}</label>
+                                     <div class="col-md-10">
+                                        <label style="font-size: 16px;"><input required type="radio" name="response" value="{{row[7]}}">&nbsp;{{row[7]}}</label>
                                      </div>
                                     </div>
                                 </div>
